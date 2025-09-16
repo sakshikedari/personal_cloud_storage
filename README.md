@@ -17,14 +17,12 @@ A full-stack project for uploading, storing, and highlighting PDFs.
 - **Auth**: JWT
 - **File Storage**: Local file system, each file uniquely identified via UUID
 
-##  Screenshots
-_Add screenshots here:_
-- ![Home Page](<img width="1914" height="838" alt="image" src="https://github.com/user-attachments/assets/85c12fe1-3f38-47d5-8704-2820ee265ae4" />
-)
-- ![Login with forgot password](<img width="1586" height="795" alt="image" src="https://github.com/user-attachments/assets/89a2588b-fef6-4758-8b12-f55d037dce6c" />
-)
-- ![setting with functionality](<img width="1138" height="860" alt="image" src="https://github.com/user-attachments/assets/709e8eac-40c0-4807-97ab-130d921f79bc" />
-)
+## Screenshots
+
+- ![Home Page](https://github.com/user-attachments/assets/85c12fe1-3f38-47d5-8704-2820ee265ae4)
+- ![Login with Forgot Password](https://github.com/user-attachments/assets/89a2588b-fef6-4758-8b12-f55d037dce6c)
+- ![Settings with Functionality](https://github.com/user-attachments/assets/709e8eac-40c0-4807-97ab-130d921f79bc)
+
 
 ## 📂 Project Structure
 personal_cloud_storage/
@@ -89,3 +87,22 @@ npm install
 npm run dev
 
 Runs on: http://localhost:3000
+
+## Key Packages Used
+
+### Backend
+- **express** – Web server  
+- **mongoose** – MongoDB integration  
+- **multer** – File uploads  
+- **uuid** – Unique file IDs  
+- **jsonwebtoken** – JWT authentication  
+
+### Frontend
+- **react** – UI library  
+- **react-router-dom** – Routing  
+- **tailwindcss** – Styling (dark/light theme support)  
+- **react-pdf** – PDF rendering  
+- **react-pdf-highlighter** – PDF highlighting  
+- **axios** – API requests  
+- **lucide-react** – Icons  
+
