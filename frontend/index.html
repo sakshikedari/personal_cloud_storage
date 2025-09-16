@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <script>
+  (function () {
+    try {
+      const saved = localStorage.getItem('settings');
+      if (saved) {
+        const settings = JSON.parse(saved);
+        const appearance = settings?.appearance ?? 'light';
+        if (appearance === 'dark') {
+          document.documentElement.classList.add('dark');
+        } else if (appearance === 'device') {
+          const m = window.matchMedia('(prefers-color-scheme: dark)');
+          if (m.matches) document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      }
+    } catch (e) {
+    }
+  })();
+</script>
+
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=help" />
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=notifications" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cloud Storage Dashboard</title>
+  </head>
+  <style>
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    direction: ltr;
+
+    font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24;
+  }
+</style>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="main.jsx"></script>
+  </body>
+</html>
